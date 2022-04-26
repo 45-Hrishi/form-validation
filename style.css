@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --font: 'sans-serif';
+    --color1: linear-gradient(to left,rgba(116,235,213,0.6),rgba(159,172,230,0));
+    --color2: linear-gradient(to left,#74ebd5,#9face6);
+    --btn-font : 'sans-serif';
+}
+
+body{
+    background: var(--color1);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-family: var(--font);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+}   
+.container{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2.8px 2.2px rgba(0,0,0,0.034),0 6.7px 5.3px rgba(0, 0, 0, 0.048),0 12.5px 5px rgba(0, 0, 0,0.048);
+    overflow: hidden;
+    width: calc(100vw - 65vw);
+    max-width: 100%;
+}
+.form{
+    padding: 40px;  
+}
+.form-control{
+    margin-bottom: 20px;
+    position: relative;
+}
+.form-control label{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.form-control input{
+    width: 100%;
+    border: 2px solid #f0f0f0;
+    display: block;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-size: 14px;
+    padding: 13px;
+}
+.form-control input:focus {
+	outline: 0;
+	border-color: #9face6;
+}
+
+.form-control input::placeholder{
+    color: #e74e3c;
+}
+.form-control input:focus::placeholder{
+    color: #9face6;
+}
+
+.form-control.success input{
+    border-color: #2ecc71;
+}
+
+.form-control.error input{
+    border-color: #e74e3c;
+}
+.form-control i{
+    position: absolute;
+    right: 12px;
+    top:38px;
+    visibility: hidden;
+}
+.form-control.success i.fa-check-circle{
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle{
+    color: #e74e3c;
+    visibility: visible;
+}
+.form-control small{
+    left: 0;
+    position: absolute;
+    color: #e74e3c;
+    visibility: hidden;
+}
+.form-control.success small{
+    left: 0;
+    position: absolute;
+    color: #2ecc71;
+    visibility: hidden;
+}
+.form-control.error small{
+    visibility: visible;
+}
+.form-control.success small{
+    visibility: visible;
+}
+.header{
+    background: var(--color2);
+    padding: 30px 0;
+}
+.header h2{
+    color: #000;
+    font-family: cursive;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.form .btn{
+    background:var(--color2) ;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    display: block;
+    font-family: sans-serif;
+    font-size: 16px;
+    padding: 15px 0;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 1s ease;
+    color: #fff;
+}
+
+.form .btn:hover{
+    opacity: 0.9;
+    cursor: pointer;
+    background: linear-gradient(to right,#74ebd5,#9face6);
+}
+
+@media(max-width:280px){
+    .container{
+        width: 95vw;
+        max-width: 100%;
+    }
+}
+@media(min-width:300px) and (max-width:800px){
+    .container{
+        width: calc(100vw - 35vw);
+        max-width: 100%;
+    }
+}
